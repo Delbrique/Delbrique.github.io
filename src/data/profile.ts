@@ -11,7 +11,7 @@ export const profile = {
   email: 'valentinbiyong2@gmail.com',
   github: 'https://github.com/Delbrique',
   githubHandle: 'Delbrique',
-  linkedin: 'https://www.linkedin.com/in/valentin-delbrique-ia-bigdata/',
+  linkedin: 'https://www.linkedin.com/in/valentin-biyong-32667b292/',
   cv: '/CV_BIYONG-VALENTIN-DELBRIQUE.pdf',
   availability: 'Ouvert aux opportunités : CDI, stage, alternance, freelance',
 }
