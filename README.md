@@ -1,6 +1,11 @@
 # Portfolio · Valentin Delbrique BIYONG
 
-Ingénieur IA, Big Data & développeur Full-Stack · https://delbrique.github.io
+Ingénieur IA, Big Data & développeur Full-Stack
+
+- https://delbrique-portfolio.vercel.app (Vercel, accessible depuis les réseaux camerounais)
+- https://delbrique.github.io (GitHub Pages, redéployé automatiquement à chaque push)
+
+Pour mettre à jour la version Vercel : `npx vercel deploy --prod`.
 
 ## Stack
 
