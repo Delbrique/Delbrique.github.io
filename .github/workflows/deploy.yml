@@ -40,3 +40,19 @@ jobs:
     steps:
       - id: deployment
         uses: actions/deploy-pages@v4
+
+  verify:
+    needs: deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Smoke test du site en ligne
+        run: |
+          set -e
+          U=https://delbrique.github.io
+          sleep 20
+          curl -fsS --retry 5 --retry-delay 10 --retry-all-errors "$U/" -o index.html
+          grep -q "<title>" index.html && grep -o "<title>.*</title>" index.html
+          for a in $(grep -oE '/assets/[^"]+' index.html) /CV_BIYONG-VALENTIN-DELBRIQUE.pdf /favicon.svg; do
+            code=$(curl -s -o /dev/null -w '%{http_code}' --retry 3 "$U$a")
+            echo "$code $a"; [ "$code" = 200 ]
+          done
