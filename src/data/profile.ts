@@ -57,38 +57,45 @@ export const timeline: TimelineItem[] = [
     kind: 'edu',
   },
   {
-    period: '2026',
+    period: '07/2026 – 09/2026',
     title: 'Stage de fin d\'études, IA appliquée',
     org: 'Global Technology & Associates (GTA)',
     text: 'Conception et livraison d\'AgriCam, une application de diagnostic phytosanitaire par vision artificielle, de la collecte des données au déploiement.',
     kind: 'work',
   },
   {
-    period: 'Bachelor 3',
-    title: 'Spécialisation Intelligence Artificielle & Big Data',
+    period: '2025 – 2026',
+    title: 'Bachelor 3 · Intelligence Artificielle & Big Data',
     org: 'Keyce Informatique & Intelligence Artificielle',
     text: 'Deep Learning, ML supervisé et non supervisé, data mining, NoSQL & Big Data, data warehouse & BI, séries temporelles, cloud, DevOps, éthique et gouvernance des données.',
     kind: 'edu',
   },
   {
-    period: 'Stage académique',
-    title: 'Design graphique & développement web',
-    org: 'Reax DigiTech',
-    text: 'Design graphique, initiation au développement web, marketing digital.',
+    period: '2024 – 2025',
+    title: 'Bachelor 2 · Informatique & Intelligence Artificielle',
+    org: 'Keyce Informatique & Intelligence Artificielle',
+    text: 'Développement web et mobile, bases de données, initiation au machine learning.',
+    kind: 'edu',
+  },
+  {
+    period: '07/2024 – 09/2024',
+    title: 'Stage académique',
+    org: 'Reax DigiTech · Tradex Awae Escalier',
+    text: 'Design graphique, apprentissage du développement web et du marketing digital.',
     kind: 'work',
   },
   {
-    period: 'Expérience',
-    title: 'Marketing digital',
-    org: 'Tradex Awae',
-    text: 'Communication, création de contenu, supports digitaux.',
-    kind: 'work',
+    period: '2023 – 2024',
+    title: 'Licence 1 · Génie Logiciel et Systèmes & Réseaux',
+    org: "Institut Africain d'Informatique (IAI)",
+    text: 'Fondations en algorithmique, développement logiciel, systèmes et réseaux.',
+    kind: 'edu',
   },
   {
-    period: 'Licence 1',
-    title: 'Génie Logiciel',
-    org: 'IAI Cameroun',
-    text: 'Fondations en algorithmique et en développement logiciel.',
+    period: '2022 – 2023',
+    title: 'Baccalauréat A4 Allemand',
+    org: 'Collège Catholique Bilingue Saint Benoît, Mvolyé',
+    text: 'Langues : français, anglais, allemand.',
     kind: 'edu',
   },
 ]
@@ -98,6 +105,7 @@ export type Category = 'IA' | 'Full-Stack' | 'Data' | 'DevOps'
 export type Project = {
   name: string
   tagline: string
+  period?: string
   description: string
   highlights?: string[]
   stack: string[]
@@ -111,6 +119,7 @@ export type Project = {
 export const projects: Project[] = [
   {
     name: 'AgriCam',
+    period: '07/2026 – 09/2026',
     tagline: 'Diagnostic phytosanitaire explicable, 100 % hors ligne',
     description:
       "Projet de fin d'études. Le producteur photographie un fruit (tomate, piment, oignon) : un détecteur YOLOv8n isole chaque fruit, puis un classifieur EfficientNetB3 diagnostique 9 états sanitaires. Une carte d'activation montre la zone qui motive la décision, calculée sans gradient. Aucune photo ne quitte le téléphone.",
@@ -128,6 +137,7 @@ export const projects: Project[] = [
   },
   {
     name: 'Cuisine Africaine',
+    period: '05/2025 – 06/2025',
     tagline: 'PWA familiale de recettes, planning et courses, avec assistant IA',
     description:
       "Application React pour organiser la cuisine en famille : recettes, favoris, planning des repas, liste de courses générée automatiquement, chat et assistant culinaire propulsé par Gemini. Refonte complète de l'UI/UX : design system, mode sombre, PWA hors ligne.",
@@ -164,6 +174,7 @@ export const projects: Project[] = [
   },
   {
     name: 'LanguesPlus',
+    period: '06/2025 – 07/2025',
     tagline: 'Apprendre le douala sur mobile',
     description:
       "Application mobile pour apprendre les langues camerounaises, centrée sur le douala : leçons, quiz, dictionnaire bilingue extrait automatiquement d'un PDF (script Python) et prononciation audio.",

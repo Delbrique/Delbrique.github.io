@@ -59,6 +59,7 @@ function FeaturedCard({ p }: { p: Project }) {
           </span>
           <Links p={p} />
         </div>
+        {p.period && <p className="mb-1 font-mono text-xs text-neon-violet">{p.period}</p>}
         <h3 className="font-display text-3xl font-bold text-white">{p.name}</h3>
         <p className="mt-1 font-medium text-neon-cyan">{p.tagline}</p>
         <p className="mt-4 text-sm leading-relaxed text-slate-400">{p.description}</p>
@@ -91,6 +92,7 @@ function ProjectCard({ p }: { p: Project }) {
           </a>
         </div>
         <p className="mt-1 text-sm font-medium text-slate-300">{p.tagline}</p>
+        {p.period && <p className="mt-1 font-mono text-[11px] text-neon-violet">{p.period}</p>}
         <p className="mt-3 text-sm leading-relaxed text-slate-500">{p.description}</p>
         <div className="mt-auto flex flex-wrap gap-1.5 pt-5">
           {p.stack.map((s) => <span key={s} className="chip !px-2.5 !py-0.5 !text-[11px]">{s}</span>)}
